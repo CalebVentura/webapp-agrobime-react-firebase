@@ -47,7 +47,7 @@ export const LineChart = () => {
             .then((snapshot) => {
                 if (snapshot.exists()) {
                     const data = Object.values(snapshot.val())
-                    const dataxx = data.map((elem) => {
+                    const dataxx = data.map((elem : any) => {
                         return {
                             id: data.indexOf(elem),
                             // A: elem.P.split('U')[0],
@@ -73,14 +73,14 @@ export const LineChart = () => {
 
     useEffect(() => {
         const executeGetData = async () => {
-            const dataFb = await handleGetData()
+            const dataFb : any = await handleGetData()
 
             const data = {
-                labels: dataFb.map((dfb) => dfb.id).slice(21, 75),
+                labels: dataFb.map((dfb : any) => dfb.id).slice(21, 75),
                 datasets: [
                     {
                         label: 'Humedad Suelo',
-                        data: dataFb.map((dfb) => dfb.D).slice(21, 75),
+                        data: dataFb.map((dfb : any) => dfb.D).slice(21, 75),
                         borderColor: 'rgb(255, 99, 132)',
                         backgroundColor: 'rgba(255, 99, 132, 0.5)',
                     },

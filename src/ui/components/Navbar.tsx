@@ -4,7 +4,7 @@ import { UserContext } from "../../context";
 
 export const Navbar = () => {
   const navigate = useNavigate()
-  const { logout } = useContext( UserContext )
+  const { logout } : any = useContext( UserContext )
 
   const handleLogout = async () => {
     navigate('/auth', { replace: true })

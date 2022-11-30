@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { UserContext } from "../../context"
 
 export const Header = () => {
-    const { user } = useContext(UserContext)
+    const { user } : any = useContext(UserContext)
 
     return (
         <>
