@@ -1,8 +1,8 @@
-import { useReducer, useState } from "react";
+import { useReducer, useState, FC } from "react";
 import { types } from "../types/types";
 import { UserContext } from "./UserContext";
 import { userReducer } from "./UserReducer";
-
+import { IUser, IUserProviderProps } from './interfaces/UserInterfaces'
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -10,23 +10,18 @@ import {
 } from "firebase/auth";
 import { auth } from "../firebase";
 
-const init = () => {
-  const user = JSON.parse(localStorage.getItem("user") as string);
-  return {
-    logged: !!user,
-    user,
+export const UserProvider: FC<IUserProviderProps> = ({ children }) => {
+  const init = () => {
+    const user = JSON.parse(localStorage.getItem("user") as string);
+    return {
+      logged: !!user,
+      user,
+    };
   };
-};
 
-interface User {
-  email: string;
-  password: string;
-}
-
-export const UserProvider = ({ children }: HTMLElement) => {
   const [userState, dispatch] = useReducer(userReducer, {}, init);
 
-  const register = async (user: User) => {
+  const register = async (user: IUser) => {
     const action = { type: types.login, payload: user };
     localStorage.setItem("user", JSON.stringify(user));
     try {
@@ -45,7 +40,7 @@ export const UserProvider = ({ children }: HTMLElement) => {
     dispatch(action); // Ejecutar una acción
   };
 
-  const login = async (user: User) => {
+  const login = async (user: IUser) => {
     const action = { type: types.login, payload: user };
     localStorage.setItem("user", JSON.stringify(user));
     try {
