@@ -1,16 +1,10 @@
-import { useState } from 'react'
-import HomeView from '../src/pages/Home'
-import './App.css'
-import '../src/assets/styles/main.scss'
+import { UserProvider } from "./context";
+import { AppRouter } from "./routers/AppRouter";
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-        <HomeView/>
-    </div>
-  )
-}
-
-export default App
+export const App = () => {
+    return (
+        <UserProvider>
+            <AppRouter/>
+        </UserProvider>
+    );
+};
