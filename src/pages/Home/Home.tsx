@@ -1,10 +1,10 @@
-import TestComponent  from '../../components/testComponent'
+import HeaderComponent  from '../../components/Header'
 import './Home.scss'
 
 const HomeView = () => {
     return (
         <div className="homeView">
-            <TestComponent/>
+            <HeaderComponent/>
         </div>
     )
 }
