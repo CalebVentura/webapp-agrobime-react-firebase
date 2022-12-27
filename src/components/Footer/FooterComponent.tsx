@@ -1,10 +1,10 @@
-import './HeaderComponent.scss'
+import './FooterComponent.scss'
 
 const FooterComponent = () => {
     return (
-        <div className="HeaderComponent">
+        <div className="FooterComponent">
             <p className={'font-size-14'}>
-                Hello everyone!
+                I'm footer
             </p>
         </div>
     )

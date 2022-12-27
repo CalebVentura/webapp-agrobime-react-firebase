@@ -1,0 +1,153 @@
+@import "colors";
+
+// utility
+.RQ-d-flex {
+  display: flex;
+}
+.RQ-d-block {
+  display: block;
+}
+.RQ-d-inline {
+  display: inline;
+}
+
+.RQ-justify-start {
+  justify-content: start;
+}
+.RQ-justify-center {
+  justify-content: center;
+}
+.RQ-justify-end {
+  justify-content: end;
+}
+.RQ-justify-between {
+  justify-content: space-between;
+}
+.RQ-justify-around {
+  justify-content: space-around;
+}
+
+.RQ-text-left {
+  text-align: left;
+}
+.RQ-text-right {
+  text-align: right;
+}
+.RQ-text-center {
+  text-align: center;
+}
+.RQ-text-justify {
+  text-align: justify;
+}
+
+.RQ-align-self-center {
+  align-self: center;
+}
+
+.RQ-cursor-pointer {
+  cursor: pointer;
+}
+
+.RQ-cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.RQ-no-pointer-events {
+  pointer-events: none;
+}
+
+.RQ-w-50{
+  width: 50%;
+}
+
+.RQ-w-100{
+  width: 100%;
+}
+
+.RQ-border {
+  border: 1px solid red;
+}
+
+.RQ-border-right {
+  border-right: 1px solid;
+}
+
+.RQ-border-left {
+  border-left: 1px solid;
+}
+
+.RQ-border-top {
+  border-top: 1px solid;
+}
+
+.RQ-border-bottom {
+  border-bottom: 1px solid;
+}
+
+.RQ-border-spacing-0{
+  border-spacing: 0;
+}
+
+.RQ-border-radius-10{
+  border-radius: 10px;
+}
+
+.RQ-border-top-radius-10{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.RQ-border-bottom-radius-10{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.RQ-border-radius-5{
+  border-radius: 5px;
+}
+
+.RQ-border-top-radius-5{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.RQ-border-bottom-radius-5{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.RQ-dashed-border{
+  border-style: dashed;
+}
+
+//.RQ-m-shadow {
+//  box-shadow: 0 4px 10px 0 $gray-shadow;
+//}
+
+.RQ-hr {
+  border: 1px solid #c5c5c5;
+}
+
+//.RQ-border-cyan-pf {
+//  border: 1px solid $cyan-pf;
+//}
+
+.RQ-d-none {
+  display: none;
+}
+
+.RQ-d-block {
+  display: block;
+}
+
+.RQ-align-center {
+  align-items: center;
+}
+
+.RQ-d-sm-block {
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+}
