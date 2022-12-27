@@ -5,7 +5,6 @@ import { Footer } from "../components/Footer";
 import Typewriter from 'typewriter-effect';
 
 export const Home = () => {
-  const { user } = useContext(UserContext);
 
   return (
     <>
@@ -21,7 +20,6 @@ export const Home = () => {
               deleteSpeed: 30,
               delay: 50,
               loop: true,
-              pauseFor: 2000,
             }}
           />
         </div>

@@ -1,26 +1,26 @@
-import { useContext, useState } from "react";
+import { useContext, useState, FormEvent, MouseEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../context";
 import { NavbarAuth } from "../components/NavbarAuth";
 import { Footer } from "../components/Footer";
 
 export const Auth = () => {
-  const { register, login } = useContext(UserContext);
+  const userContext = useContext(UserContext);
   const navigate = useNavigate();
   const [userCredentials, setUserCredentials] = useState({ email: '', password: '' })
   const [errorMessage, setErrorMessage] = useState('')
 
-  const handleChange = ({ target: { name, value } }) => {
+  const handleChange = ({ target: { name, value } }: { target: { name: string, value: string } }) => {
     setUserCredentials({ ...userCredentials, [name]: value })
   }
 
-  const handleRegister = async (ev) => {
+  const handleRegister = async (ev: MouseEvent<HTMLButtonElement>) => {
     ev.preventDefault()
     const lastPath = localStorage.getItem('lastPath') || '/dashboard'
     try {
-      await register(userCredentials)
+      await userContext?.register(userCredentials)
       navigate(lastPath, { replace: true })
-    } catch (e) {
+    } catch (e: any) {
       switch (e.message) {
         case 'auth/weak-password':
           setErrorMessage('El password debe tener al menos 6 caracteres')
@@ -38,13 +38,13 @@ export const Auth = () => {
     }
   }
 
-  const handleLogin = async (ev) => {
+  const handleLogin = async (ev: MouseEvent<HTMLButtonElement>) => {
     ev.preventDefault()
     const lastPath = localStorage.getItem('lastPath') || '/dashboard'
     try {
-      await login(userCredentials)
+      await userContext?.login(userCredentials)
       navigate(lastPath, { replace: true })
-    } catch (e) {
+    } catch (e: any) {
       console.log(e.message)
       switch (e.message) {
         case 'auth/weak-password':

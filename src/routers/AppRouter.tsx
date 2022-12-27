@@ -11,8 +11,14 @@ export const AppRouter = () => {
     <div className="">
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path='/auth' element={<PublicRoutes> <Auth/> </PublicRoutes>} />
-        <Route path="/*" element={ <PrivateRoutes> <ClientRoutes /> </PrivateRoutes>} />
+        <Route path='/auth' element={
+            <PublicRoutes>
+                <Auth/>
+            </PublicRoutes>} />
+        <Route path="/*" element={ 
+            <PrivateRoutes>
+                <ClientRoutes />
+            </PrivateRoutes>} />
       </Routes>
     </div>
   );
