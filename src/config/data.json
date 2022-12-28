@@ -1,0 +1,48 @@
+{
+  "footer": {
+    "mail": "support@example.com",
+    "number": "+1-900-123 4567",
+    "socialMedia": [
+      {
+        "page": "facebook",
+        "url": "/"
+      },
+      {
+        "page": "twitter",
+        "url": "/"
+      },
+      {
+        "page": "instagram",
+        "url": "/"
+      }
+    ],
+    "menu": [
+      {
+        "name": "Home",
+        "goTo": "#"
+      },
+      {
+        "name": "About us",
+        "goTo": "#"
+      },
+      {
+        "name": "Contact us",
+        "goTo": "#"
+      }
+    ],
+    "suport": [
+      {
+        "name": "FAQs",
+        "goTo": "#"
+      },
+      {
+        "name": "Support",
+        "goTo": "#"
+      },
+      {
+        "name": "Privacy policy",
+        "goTo": "#"
+      }
+    ]
+  }
+}
