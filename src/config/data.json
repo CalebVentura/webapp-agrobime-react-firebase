@@ -16,33 +16,39 @@
         "url": "/"
       }
     ],
-    "menu": [
-      {
-        "name": "Home",
-        "goTo": "#"
-      },
-      {
-        "name": "About us",
-        "goTo": "#"
-      },
-      {
-        "name": "Contact us",
-        "goTo": "#"
-      }
-    ],
-    "suport": [
-      {
-        "name": "FAQs",
-        "goTo": "#"
-      },
-      {
-        "name": "Support",
-        "goTo": "#"
-      },
-      {
-        "name": "Privacy policy",
-        "goTo": "#"
-      }
-    ]
+    "menu": {
+      "title": "Menú",
+      "content": [
+        {
+          "name": "Home",
+          "goTo": "#"
+        },
+        {
+          "name": "About us",
+          "goTo": "#"
+        },
+        {
+          "name": "Contact us",
+          "goTo": "#"
+        }
+      ]
+    },
+    "support": {
+      "title": "Support",
+      "content": [
+        {
+          "name": "FAQs",
+          "goTo": "#"
+        },
+        {
+          "name": "Support",
+          "goTo": "#"
+        },
+        {
+          "name": "Privacy policy",
+          "goTo": "#"
+        }
+      ]
+    }
   }
 }

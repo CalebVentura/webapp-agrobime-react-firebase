@@ -3,6 +3,8 @@ $theme2-color: #2BAE66;
 $theme3-color: #1F7A48;
 $theme4-color: #023535;
 
+$white: white;
+
 .RQ-theme1 {
   color: $theme1-color;
 }
@@ -18,3 +20,7 @@ $theme4-color: #023535;
 .RQ-theme4 {
   color: $theme4-color
 };
+
+.RQ-white {
+  color: $white;
+}

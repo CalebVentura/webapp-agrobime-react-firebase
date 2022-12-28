@@ -1,3 +1,24 @@
+$font-bold: 700;
+$font-semi-bold: 600;
+$font-regular: 400;
+$font-light: 300;
+
+.RQ-f-bold {
+  font-weight: $font-bold;
+}
+
+.RQ-f-semi-bold {
+  font-weight: $font-semi-bold;
+}
+
+.RQ-f-regular {
+  font-weight: $font-regular;
+}
+
+.RQ-f-light {
+  font-weight: $font-light;
+}
+
 .font-size-14 {
   font-size: 14px;
 }
