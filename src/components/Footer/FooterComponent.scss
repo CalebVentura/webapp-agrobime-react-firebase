@@ -1,10 +1,52 @@
 @import "../assets/scss/style";
 
 .FooterComponent {
-  background-color: $theme3-color;
+  background-color: $theme2-color;
 
   .column1, .column2, .column3 {
     margin: 0 6rem;
+  }
+
+  .column1 {
+    .logo-agrobime {
+      img {
+        width: 50px;
+      }
+    }
+
+    .social_media {
+      display: flex;
+      li {
+        padding: 0;
+        list-style-type: none;
+        margin: 0;
+        a {
+          width: 30px;
+          height: 30px;
+          text-align: center;
+          line-height: 37px;
+          font-size: 15px;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          border-radius: 50px;
+          margin-right: 10px;
+          transition: .4s all;
+          svg {
+            width: 15px;
+            fill: white;
+          }
+        }
+        a:hover {
+          background-color: white;
+          svg {
+            fill: $theme2-color;
+            transition: 0.5s;
+          }
+        }
+        a:not(:hover) svg {
+          transition: 0.5s;
+        }
+      }
+    }
   }
 
   .column2, .column3 {
@@ -16,5 +58,10 @@
         color: $white;
       }
     }
+  }
+
+  .footer-signature {
+    align-items: center;
+    position: relative
   }
 }

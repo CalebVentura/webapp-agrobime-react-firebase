@@ -2,6 +2,7 @@
   "footer": {
     "mail": "support@example.com",
     "number": "+1-900-123 4567",
+    "logoUrl": "https://renzoqc.dev/files/agrobime/logos/agrobime.png",
     "socialMedia": [
       {
         "page": "facebook",
