@@ -9,7 +9,7 @@ const FooterComponent = () => {
     return (
         <div className="FooterComponent RQ-py-6">
             <Row className={"RQ-d-flex RQ-justify-center"} noGutter flex>
-                <Col omd={6} umd={18} className={"column1 RQ-white"}>
+                <Col xs={18} sm={18} other={4} className={"column1 RQ-white"}>
                     <Row className={"RQ-mb-3"} noGutter flex>
                         <Col className={"RQ-d-flex RQ-justify-center RQ-align-center logo-agrobime"}>
                             <img src={data.footer.logoUrl} alt="agrobime"/>
@@ -37,8 +37,8 @@ const FooterComponent = () => {
                             </a>
                         </li>
                     </ul>
-                </Col>
-                <Col omd={6} umd={18} className={"column2 RQ-white"}>
+                </Col >
+                <Col xs={18} sm={18} other={4} className={"column2 RQ-white"}>
                     <p className={"RQ-f-bold"}>{data.footer.menu.title}</p>
                     <ul>
                         {data.footer.menu.content.map((item, index) => (
@@ -48,7 +48,7 @@ const FooterComponent = () => {
                         ))}
                     </ul>
                 </Col>
-                <Col omd={6} umd={18} className={"column3 RQ-white"}>
+                <Col xs={18} sm={18} other={4} className={"column3 RQ-white"}>
                     <p className={"RQ-f-bold"}>{data.footer.support.title}</p>
                     <ul>
                         {data.footer.support.content.map((item, index) => (
@@ -63,10 +63,10 @@ const FooterComponent = () => {
                 className={"footer-signature RQ-d-flex"}
                 noGutter
             >
-                <Col xs={18} sm={18} other={13}  className="column-left">
+                <Col xs={18} sm={18} other={9}  className="column-left ">
                     <p className={'RQ-f-bold'}>© Copyrights 2022. All rights reserved.</p>
                 </Col>
-                <Col xs={18} sm={18} other={5} className="column-right">
+                <Col xs={18} sm={18} other={9} className="column-right">
                     <p>Design & developed by Agrobime Devs</p>
                 </Col>
             </Row>

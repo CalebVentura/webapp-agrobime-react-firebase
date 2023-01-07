@@ -4,7 +4,7 @@
   background-color: $theme2-color;
 
   .column1, .column2, .column3 {
-    margin: 0 6rem;
+    margin: 0 1rem;
   }
 
   .column1 {
@@ -61,7 +61,12 @@
   }
 
   .footer-signature {
-    //align-items: center;
-    //height: 100vh;
+    padding: 0 5rem;
+    .column-right {
+      p {
+        position: absolute;
+        right: 5rem;
+      }
+    }
   }
 }
