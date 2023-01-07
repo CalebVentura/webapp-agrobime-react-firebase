@@ -26,7 +26,12 @@
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
-    "sass": "^1.56.1",
+    "node-sass": "^7.0.3",
+    "postcss": "^8.3.11",
+    "postcss-css-variables": "^0.18.0",
+    "postcss-delete-duplicate-css": "^1.0.0",
+    "sass": "^1.57.1",
+    "sass-loader": "^12.3.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
   }

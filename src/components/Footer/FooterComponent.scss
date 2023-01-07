@@ -1,4 +1,4 @@
-@import "../assets/scss/style";
+@import "../assets/scss/style.scss";
 
 .FooterComponent {
   background-color: $theme2-color;
@@ -61,7 +61,7 @@
   }
 
   .footer-signature {
-    align-items: center;
-    position: relative
+    //align-items: center;
+    //height: 100vh;
   }
 }

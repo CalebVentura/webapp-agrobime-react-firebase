@@ -6,32 +6,32 @@
 
   // margin and padding shorthand prefixes
   $prefixes: (
-    p: padding,
-    px: (
-      padding-left,
-      padding-right,
-    ),
-    py: (
-      padding-top,
-      padding-bottom,
-    ),
-    pt: padding-top,
-    pr: padding-right,
-    pb: padding-bottom,
-    pl: padding-left,
-    m: margin,
-    mx: (
-      margin-left,
-      margin-right,
-    ),
-    my: (
-      margin-top,
-      margin-bottom,
-    ),
-    mt: margin-top,
-    mr: margin-right,
-    mb: margin-bottom,
-    ml: margin-left,
+          p: padding,
+          px: (
+                  padding-left,
+                  padding-right,
+          ),
+          py: (
+                  padding-top,
+                  padding-bottom,
+          ),
+          pt: padding-top,
+          pr: padding-right,
+          pb: padding-bottom,
+          pl: padding-left,
+          m: margin,
+          mx: (
+                  margin-left,
+                  margin-right,
+          ),
+          my: (
+                  margin-top,
+                  margin-bottom,
+          ),
+          mt: margin-top,
+          mr: margin-right,
+          mb: margin-bottom,
+          ml: margin-left,
   ) !default;
 
   // Loop generating all spacing styles

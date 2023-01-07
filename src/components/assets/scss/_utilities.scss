@@ -120,17 +120,17 @@
   border-style: dashed;
 }
 
-//.RQ-m-shadow {
-//  box-shadow: 0 4px 10px 0 $gray-shadow;
-//}
+.RQ-m-shadow {
+  box-shadow: 0 4px 10px 0 $gray-shadow;
+}
 
 .RQ-hr {
   border: 1px solid #c5c5c5;
 }
 
-//.RQ-border-cyan-pf {
-//  border: 1px solid $cyan-pf;
-//}
+.RQ-border-cyan-pf {
+  border: 1px solid $cyan-pf;
+}
 
 .RQ-d-none {
   display: none;
@@ -139,6 +139,12 @@
 .RQ-d-block {
   display: block;
 }
+
+// .RQ-d-sm-block {
+//   @media only screen and (max-width: 600px) {
+//     display: block;
+//   }
+// }
 
 .RQ-align-center {
   align-items: center;

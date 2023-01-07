@@ -59,22 +59,14 @@ const FooterComponent = () => {
                     </ul>
                 </Col>
             </Row>
-            {/*<Row className={"footer-signature RQ-d-flex"} noGutter flex>*/}
-            {/*    <Col omd={9} umd={18} className={" logo-agrobime"}>*/}
-            {/*        <p>© Copyrights 2022. All rights reserved.</p>*/}
-            {/*    </Col>*/}
-            {/*    <Col omd={9} umd={18} className={""}>*/}
-            {/*        <p className={"RQ-f-bold RQ-mb-0 RQ-text-right"}>Design & developed by Agrobime Devs</p>*/}
-            {/*    </Col>*/}
-            {/*</Row>*/}
             <Row
                 className={"footer-signature RQ-d-flex"}
                 noGutter
             >
-                <Col xs={18} other={9} className="column-left">
-                    <p>© Copyrights 2022. All rights reserved.</p>
+                <Col xs={18} sm={18} other={13}  className="column-left">
+                    <p className={'RQ-f-bold'}>© Copyrights 2022. All rights reserved.</p>
                 </Col>
-                <Col xs={18} other={9} className="column-right">
+                <Col xs={18} sm={18} other={5} className="column-right">
                     <p>Design & developed by Agrobime Devs</p>
                 </Col>
             </Row>
