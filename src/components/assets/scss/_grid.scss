@@ -20,17 +20,17 @@ $breakpoint-sm: 768px !default;
 $breakpoint-xs: 480px !default;
 
 $breakpoints: (
-    "lg": "(min-width: " + ($breakpoint-md + 1) + ")",
-    "md": "(min-width: " + ($breakpoint-sm + 1) + ") and (max-width: " + $breakpoint-md + ")",
-    "sm": "(min-width: " + ($breakpoint-xs + 1) + ") and (max-width:" + $breakpoint-sm + ")",
-    "xs": "(max-width:" + $breakpoint-xs + ")"
+        "lg": "(min-width: " + ($breakpoint-md + 1) + ")",
+        "md": "(min-width: " + ($breakpoint-sm + 1) + ") and (max-width: " + $breakpoint-md + ")",
+        "sm": "(min-width: " + ($breakpoint-xs + 1) + ") and (max-width:" + $breakpoint-sm + ")",
+        "xs": "(max-width:" + $breakpoint-xs + ")"
 ) !default;
 
 $breakpointsSizes: (
-    "lg" $breakpoint-lg,
-    "md" $breakpoint-md,
-    "sm" $breakpoint-sm,
-    "xs" $breakpoint-xs
+        "lg" $breakpoint-lg,
+        "md" $breakpoint-md,
+        "sm" $breakpoint-sm,
+        "xs" $breakpoint-xs
 ) !default;
 /**
  * Grid loop mixin
@@ -114,7 +114,7 @@ $breakpointsSizes: (
     $name: nth($breakpoint, 1);
     $declaration: nth($breakpoint, 2);
 
-    @media only screen and (#{$declaration}) {
+    @media only screen and #{$declaration} {
         @include grid-loop($name);
         .RQ-hidden-#{$name} {
             display: none;

@@ -16,7 +16,7 @@
   height: 20px;
 }
 
-@media screen and (#{map-get($breakpoints, 'xs')}) {
+@media screen and #{map-get($breakpoints, 'xs')} {
   .RQ-icon-xs {
     width: 18px;
     height: 18px;
