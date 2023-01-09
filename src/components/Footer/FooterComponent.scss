@@ -3,8 +3,13 @@
 .FooterComponent {
   background-color: $theme2-color;
 
+  .footer-content {
+    width: 70%;
+    margin: auto;
+  }
+
   .column1, .column2, .column3 {
-    margin: 0 1rem;
+    //margin: 0 1rem;
   }
 
   .column1 {
@@ -60,13 +65,17 @@
     }
   }
 
-  .footer-signature {
-    padding: 0 5rem;
-    .column-right {
-      p {
-        position: absolute;
-        right: 5rem;
+  .footer-sign {
+    background-color: $theme3-color;
+    .content-sign {
+      width: 70%;
+      margin: auto;
+      .column-right {
+        p {
+          float: right;
+        }
       }
     }
+
   }
 }
