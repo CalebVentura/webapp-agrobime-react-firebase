@@ -2,80 +2,165 @@
 
 .FooterComponent {
   background-color: $theme2-color;
+}
 
-  .footer-content {
-    width: 70%;
-    margin: auto;
-  }
+@include media-breakpoint-down(sm) {
+  .FooterComponent {
 
-  .column1, .column2, .column3 {
-    //margin: 0 1rem;
-  }
-
-  .column1 {
-    .logo-agrobime {
-      img {
-        width: 50px;
-      }
+    .footer-content {
+      width: 70%;
+      margin: auto;
     }
 
-    .social_media {
-      display: flex;
-      li {
-        padding: 0;
-        list-style-type: none;
-        margin: 0;
-        a {
-          width: 30px;
-          height: 30px;
-          text-align: center;
-          line-height: 37px;
-          font-size: 15px;
-          border: 1px solid rgba(255, 255, 255, 0.3);
-          border-radius: 50px;
-          margin-right: 10px;
-          transition: .4s all;
-          svg {
-            width: 15px;
-            fill: white;
-          }
+    .column1 {
+      .logo-agrobime {
+        img {
+          width: 50px;
         }
-        a:hover {
-          background-color: white;
-          svg {
-            fill: $theme2-color;
+      }
+
+      .social_media {
+        margin-top: 2rem;
+        display: flex;
+        padding-left: 0;
+        li {
+          padding: 0;
+          list-style-type: none;
+          margin: 0;
+          a {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 37px;
+            font-size: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            margin-right: 10px;
+            transition: .4s all;
+            svg {
+              width: 15px;
+              fill: white;
+            }
+          }
+          a:hover {
+            background-color: white;
+            svg {
+              fill: $theme2-color;
+              transition: 0.5s;
+            }
+          }
+          a:not(:hover) svg {
             transition: 0.5s;
           }
         }
-        a:not(:hover) svg {
-          transition: 0.5s;
+      }
+    }
+
+    .column2, .column3 {
+      margin-top: 1.5rem;
+      > ul {
+        list-style-type: none;
+        padding-left: 0;
+        > li {
+          margin: 0.3rem 0;
+          a {
+            text-decoration: none;
+            color: $white;
+            &:hover {
+              color: $theme3-color;
+              transition: 0.5s;
+            }
+            &:not(:hover) {
+              transition: 0.5s;
+            }
+          }
+
         }
       }
     }
-  }
 
-  .column2, .column3 {
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-      > li a {
-        text-decoration: none;
-        color: $white;
-      }
+    .footer-sign {
+      background-color: $theme3-color;
+
     }
-  }
 
-  .footer-sign {
-    background-color: $theme3-color;
-    .content-sign {
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .FooterComponent {
+
+    .footer-content {
       width: 70%;
       margin: auto;
-      .column-right {
-        p {
-          float: right;
+    }
+
+    .column1 {
+      .logo-agrobime {
+        img {
+          width: 50px;
+        }
+      }
+
+      .social_media {
+        margin-top: 2rem;
+        display: flex;
+        li {
+          padding: 0;
+          list-style-type: none;
+          margin: 0;
+          a {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 37px;
+            font-size: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            margin-right: 10px;
+            transition: .4s all;
+            svg {
+              width: 15px;
+              fill: white;
+            }
+          }
+          a:hover {
+            background-color: white;
+            svg {
+              fill: $theme2-color;
+              transition: 0.5s;
+            }
+          }
+          a:not(:hover) svg {
+            transition: 0.5s;
+          }
         }
       }
     }
 
+    .column2, .column3 {
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+        > li a {
+          text-decoration: none;
+          color: $white;
+        }
+      }
+    }
+
+    .footer-sign {
+      background-color: $theme3-color;
+      .content-sign {
+        width: 70%;
+        margin: auto;
+        .column-right {
+          p {
+            float: right;
+          }
+        }
+      }
+
+    }
   }
 }

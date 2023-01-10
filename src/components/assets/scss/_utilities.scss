@@ -157,3 +157,39 @@
     }
   }
 }
+
+.RQ-text-xs-center {
+  @include media-breakpoint-down(xs) {
+    text-align: center;
+  }
+}
+
+.RQ-text-sm-center {
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+}
+
+.RQ-text-md-center {
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+}
+
+.RQ-justify-xs-center {
+  @include media-breakpoint-down(xs) {
+    justify-content: center;
+  }
+}
+
+.RQ-justify-sm-center {
+  @include media-breakpoint-down(sm) {
+    justify-content: center;
+  }
+}
+
+.RQ-justify-md-center {
+  @include media-breakpoint-down(md) {
+    justify-content: center;
+  }
+}

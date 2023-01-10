@@ -10,8 +10,8 @@ const FooterComponent = () => {
         <div className="FooterComponent RQ-pt-6">
             <div className="footer-content">
                 <Row className={"RQ-d-flex RQ-justify-center RQ-my-4"} noGutter flex>
-                    <Col umd={18} omd={8} className={"column1 RQ-white"}>
-                        <Row className={"RQ-mb-3"} noGutter flex>
+                    <Col usm={18} osm={8} className={"column1 RQ-white"}>
+                        <Row className={"RQ-mb-3 RQ-justify-xs-center"} noGutter flex>
                             <Col className={"RQ-d-flex RQ-justify-center RQ-align-center logo-agrobime"}>
                                 <img src={data.footer.logoUrl} alt="agrobime"/>
                             </Col>
@@ -19,9 +19,9 @@ const FooterComponent = () => {
                                 <p className={"RQ-f-bold RQ-mb-0"}>AGROBIME</p>
                             </Col>
                         </Row>
-                        <p>{data.footer.mail}</p>
-                        <p>{data.footer.number}</p>
-                        <ul className="social_media">
+                        <p className={"RQ-text-xs-center RQ-my-3"}>{data.footer.mail}</p>
+                        <p className={"RQ-text-xs-center RQ-my-3"}>{data.footer.number}</p>
+                        <ul className="social_media RQ-justify-xs-center">
                             <li>
                                 <a href="#" className={"RQ-d-flex RQ-justify-center RQ-align-center"}>
                                     <FacebookLogo/>
@@ -39,21 +39,21 @@ const FooterComponent = () => {
                             </li>
                         </ul>
                     </Col >
-                    <Col umd={18} omd={8} className={"column2 RQ-white"}>
-                        <p className={"RQ-f-bold"}>{data.footer.menu.title}</p>
+                    <Col usm={18} osm={8} className={"column2 RQ-white"}>
+                        <p className={"RQ-f-bold RQ-text-xs-center"}>{data.footer.menu.title}</p>
                         <ul>
                             {data.footer.menu.content.map((item, index) => (
-                                <li key={index}>
+                                <li key={index} className={"RQ-text-xs-center"}>
                                     <a href={item.goTo}>{item.name}</a>
                                 </li>
                             ))}
                         </ul>
                     </Col>
-                    <Col umd={18} omd={2} className={"column3 RQ-white"}>
-                        <p className={"RQ-f-bold"}>{data.footer.support.title}</p>
+                    <Col usm={18} osm={2} className={"column3 RQ-white"}>
+                        <p className={"RQ-f-bold RQ-text-xs-center"}>{data.footer.support.title}</p>
                         <ul>
                             {data.footer.support.content.map((item, index) => (
-                                <li key={index}>
+                                <li key={index} className={"RQ-text-xs-center"}>
                                     <a href={item.goTo}>{item.name}</a>
                                 </li>
                             ))}
@@ -64,15 +64,15 @@ const FooterComponent = () => {
             <div className="footer-sign RQ-py-3">
                 <div className={"content-sign"}>
                     <Row
-                        className={"footer-signature RQ-d-flex"}
+                        className={"footer-signature RQ-d-flex RQ-white"}
                         noGutter
                         flex
                     >
-                        <Col umd={18} omd={9}  className="column-left ">
-                            <p className={'RQ-f-bold'}>© Copyrights 2022. All rights reserved.</p>
+                        <Col umd={18} omd={9}  className="column-left">
+                            <p className={'RQ-f-bold RQ-f-13 RQ-text-sm-center'}>{data.footer.sign.copyright}</p>
                         </Col>
                         <Col umd={18} omd={9} className="column-right">
-                            <p>Design & developed by Agrobime Devs</p>
+                            <p className={"RQ-f-13 RQ-text-sm-center"}>{data.footer.sign.author}</p>
                         </Col>
                     </Row>
                 </div>

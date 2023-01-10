@@ -50,6 +50,10 @@
           "goTo": "#"
         }
       ]
+    },
+    "sign": {
+      "copyright": "© Copyrights 2022. All rights reserved.",
+      "author": "Design & developed by Agrobime Devs"
     }
   }
 }
