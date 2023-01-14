@@ -7,7 +7,7 @@ import InstagramLogo from '../assets/icons/instagram'
 
 const FooterComponent = () => {
     return (
-        <div className="FooterComponent RQ-pt-6">
+        <div className="FooterComponent">
             <div className="footer-content">
                 <Row className={"RQ-d-flex RQ-justify-center RQ-my-4"} noGutter flex>
                     <Col usm={18} osm={8} className={"column1 RQ-white"}>

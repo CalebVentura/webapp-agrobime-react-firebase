@@ -1,0 +1,28 @@
+@import "../assets/scss/style.scss";
+
+.CarouselComponent {
+
+  .carousel-container {
+    background: yellow;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  > .carousel-itemx {
+    height: 3rem;
+    min-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+
+}
+
+@include media-breakpoint-down(sm) {
+}
+
+@include media-breakpoint-up(sm) {
+}

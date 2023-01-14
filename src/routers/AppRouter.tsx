@@ -8,14 +8,14 @@ import { PublicRoutes } from "./PublicRoutes";
 
 export const AppRouter = () => {
   return (
-    <div className="">
+    <div>
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path='/auth' element={
             <PublicRoutes>
                 <Auth/>
             </PublicRoutes>} />
-        <Route path="/*" element={ 
+        <Route path="/*" element={
             <PrivateRoutes>
                 <ClientRoutes />
             </PrivateRoutes>} />
