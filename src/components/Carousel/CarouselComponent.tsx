@@ -7,7 +7,7 @@ const CarouselComponent = () => {
 
     return (
         <div className="CarouselComponent RQ-text-center">
-            <h2 className={"RQ-f-u24-o40"}>{data.carousel.title}</h2>
+            <h2 className={"RQ-f-u24-o40 RQ-f-bold"}>{data.carousel.title}</h2>
             {data.carousel.comment.length > 0 && <p className={"RQ-f-u14-o16"}>{data.carousel.comment}</p>}
             <div className="carousel-list">
                 {data.carousel.list.map((item, index) =>

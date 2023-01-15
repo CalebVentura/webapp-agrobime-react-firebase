@@ -150,6 +150,13 @@ p {
   }
 }
 
+.RQ-f-u16-o18 {
+  font-size: 16px;
+  @include media-breakpoint-up(sm) {
+    font-size: 18px;
+  }
+}
+
 .RQ-f-u24-o40 {
   font-size: 24px;
   @include media-breakpoint-up(sm) {

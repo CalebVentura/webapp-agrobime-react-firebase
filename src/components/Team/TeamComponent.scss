@@ -1,0 +1,24 @@
+@import "../assets/scss/style.scss";
+
+.TeamComponent {
+  margin: 4rem 0;
+  h2 {
+    @include media-breakpoint-up(sm) {
+      margin: 2rem 0;
+    }
+  }
+
+  .team-item {
+    .team-item-content {
+      img {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        @include media-breakpoint-up(sm) {
+          width: 10rem;
+          height: 10rem;
+        }
+      }
+    }
+  }
+}

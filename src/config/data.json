@@ -28,6 +28,28 @@
       }
     ]
   },
+  "team": [
+    {
+      "name": "Caleb Ventura",
+      "source": "https://renzoqc.dev/files/agrobime/team/caleb.jpg",
+      "career": "Ing. de Telecomunicaciones"
+    },
+    {
+      "name": "Jamer X",
+      "source": "https://renzoqc.dev/files/agrobime/team/jamer.jpg",
+      "career": "Ing. de Telecomunicaciones"
+    },
+    {
+      "name": "Marjorie X",
+      "source": "https://renzoqc.dev/files/agrobime/team/marjorie.jpg",
+      "career": "Ing. de Telecomunicaciones"
+    },
+    {
+      "name": "Renzo Quispe",
+      "source": "https://renzoqc.dev/files/agrobime/team/renzo.png",
+      "career": "FullStack Developer"
+    }
+  ],
   "footer": {
     "mail": "support@example.com",
     "number": "+1-900-123 4567",

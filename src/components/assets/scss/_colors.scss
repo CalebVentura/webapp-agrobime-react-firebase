@@ -45,3 +45,13 @@ $white: white;
 .RQ-white {
   color: $white;
 }
+
+.RQ-hover-theme {
+  &:hover {
+    color: $theme3-color;
+    transition: 0.8s;
+  }
+  &:not(:hover) {
+    transition: 0.5s;
+  }
+}

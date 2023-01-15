@@ -3,6 +3,7 @@ import HeaderComponent from '../../components/Header'
 import FooterComponent from '../../components/Footer'
 import CarouselTest from '../../components/Carousel'
 import HomeComponent from '../../components/Home'
+import TeamComponent from '../../components/Team'
 import './Home.scss'
 
 const HomeView = () => {
@@ -11,6 +12,7 @@ const HomeView = () => {
             <HeaderComponent/>
             <HomeComponent/>
             <CarouselTest/>
+            <TeamComponent/>
             <FooterComponent/>
         </div>
     )
