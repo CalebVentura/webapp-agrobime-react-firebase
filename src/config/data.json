@@ -1,4 +1,22 @@
 {
+  "carousel": {
+    "title": "Trusted by:",
+    "comment": "some text",
+    "list": [
+      {
+        "name": "fiee",
+        "itemUrl": "https://renzoqc.dev/files/agrobime/logos/fiee.png"
+      },
+      {
+        "name": "startup-uni",
+        "itemUrl": "https://renzoqc.dev/files/agrobime/logos/startupuni.jpg"
+      },
+      {
+        "name": "uni",
+        "itemUrl": "https://renzoqc.dev/files/agrobime/logos/uni.png"
+      }
+    ]
+  },
   "footer": {
     "mail": "support@example.com",
     "number": "+1-900-123 4567",

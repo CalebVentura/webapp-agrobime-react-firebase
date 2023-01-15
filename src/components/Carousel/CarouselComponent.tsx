@@ -5,32 +5,17 @@ import { Col, Row } from "../Grid/Grid";
 
 const CarouselComponent = () => {
 
-    const data = ['1', '2', '3', '4']
-    const [currentIndex, setCurrentIndex] = useState(0)
-
-    const carouselInfiniteScroll = () => {
-        if(currentIndex === data.length - 1) {
-            return setCurrentIndex(0)
-        }
-        return setCurrentIndex(currentIndex + 1)
-    }
-
-    useEffect(() => {
-        const interval = setInterval(() => {carouselInfiniteScroll()}, 3000)
-        //clean up function
-        return () => clearInterval(interval)
-    })
-
     return (
-        <div className="CarouselComponent">
-            <div className="carousel-container">
-                {data.map((item, index) => {
-                    return <h1
-                        className="carousel-itemx"
-                        style={{transform: `translate(-${currentIndex * 100}%)`}}
-                        key={index}
-                    >{item}</h1>
-                })}
+        <div className="CarouselComponent RQ-text-center">
+            <h2 className={"RQ-f-u24-o40"}>{data.carousel.title}</h2>
+            <p className={"RQ-f-u14-o16"}>{data.carousel.comment}</p>
+            <div className="carousel-list">
+                {data.carousel.list.map((item, index) =>
+                    <img
+                        src={item.itemUrl}
+                        alt={item.name}
+                    />
+                )}
             </div>
         </div>
     )
