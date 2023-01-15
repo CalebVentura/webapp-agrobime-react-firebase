@@ -1,0 +1,21 @@
+@import "../assets/scss/style.scss";
+
+.HomeComponent {
+  .home-img {
+    img {
+      width: 100%;
+    }
+  }
+  .home-content {
+    color: gray;
+    .type-writer {
+      height: 100px;
+      @include media-breakpoint-up(md) {
+        height: 130px;
+      }
+    }
+    .Typewriter__wrapper {
+      color: $theme3-color;
+    }
+  }
+}

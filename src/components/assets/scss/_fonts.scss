@@ -157,3 +157,12 @@ p {
   }
 }
 
+.RQ-f-u24-i28-o40 {
+  font-size: 24px;
+  @include media-breakpoint-up(sm) {
+    font-size: 28px;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 40px;
+  }
+}

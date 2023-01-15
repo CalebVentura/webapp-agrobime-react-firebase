@@ -1,6 +1,17 @@
 {
+  "home": {
+    "title": [
+      "Para mejorar la producción de nuestros clientes.",
+      "Innovamos en el monitoreo de cultivos agrícolas."
+    ],
+    "content": "En Agrobime hemos logrado diseñar e implementar un sistema de monitoreo electrónico de cultivos agrícolas, que nos permite obtener información de parámetros necesarios para el cutlivo, con el cuál podemos realizar análisis y así poder tomar decisiones para mejorar la producción de nuestros clientes. Para este fin, hemos desarrollado esta plataforma web, que nos permite visualizar datos ya procesados, convertidos en estadísticas e informes.",
+    "img": {
+      "name": "agrobime",
+      "src": "https://renzoqc.dev/files/agrobime/farming-img/farming5.jpg"
+    }
+  },
   "carousel": {
-    "title": "Trusted by:",
+    "title": "Instituciones que nos respaldan",
     "comment": "some text",
     "list": [
       {
