@@ -1,5 +1,98 @@
 @import "../assets/scss/style.scss";
 
-.HeaderComponent {
-  background-color: $theme1-color;
+.main-menu {
+  position: relative !important;
+  background-color: $theme2-color;
+  .HeaderComponent {
+    align-items: center;
+
+    .header-logo-img {
+      width: 45px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      .navigation-menu {
+        .MenuHeader {
+          display: none;
+        }
+        a {
+          cursor: pointer;
+          float: right;
+          svg {
+            fill: white;
+          }
+        }
+        a:hover svg {
+          fill: white;
+          transition: 0.5s;
+        }
+        a:not(:hover) svg {
+          transition: 0.5s;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+      .navigation-menu {
+        .MenuHeader {
+          display: block;
+        }
+        .icon-side-bar {
+          display: none;
+        }
+      }
+    }
+  }
+  .side-bar {
+    .sideBar-close {
+      padding-right: 1rem;
+      float: right;
+      svg {
+        fill: white;
+      }
+    }
+    padding-top: 2rem;
+    overflow: hidden;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: $theme3-color;
+    color: white;
+    width: 60%;
+    box-shadow: -10px 0px 30px -15px #020c1bb3;
+    .sideBar-download {
+      margin-top: 2rem;
+      a {
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 0.5rem 0.6rem;
+        color: white;
+        &:hover {
+          background-color: $theme4-color;
+          transition: 0.5s;
+        }
+        &:not(:hover) {
+          transition: 0.5s;
+        }
+      }
+    }
+    ul {
+      margin-top: 3rem;
+      padding-left: 0;
+      > li {
+        margin: 1.5rem 0;
+        cursor: pointer;
+        width: 100%;
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
 }

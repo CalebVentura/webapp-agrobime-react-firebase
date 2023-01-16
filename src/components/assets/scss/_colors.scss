@@ -1,6 +1,7 @@
 $theme1-color: #89FABC;
 $theme2-color: #2BAE66;
 $theme3-color: #1F7A48;
+$theme3-color-hover: #216540;
 $theme4-color: #023535;
 
 $cyan: #2ac0f1;
@@ -46,7 +47,7 @@ $white: white;
   color: $white;
 }
 
-.RQ-hover-theme {
+.RQ-hover-text-theme3 {
   &:hover {
     color: $theme3-color;
     transition: 0.8s;
@@ -54,4 +55,38 @@ $white: white;
   &:not(:hover) {
     transition: 0.5s;
   }
+}
+
+.RQ-hover-text-gray {
+  &:hover {
+    color: gray;
+    transition: 0.8s;
+  }
+  &:not(:hover) {
+    transition: 0.5s;
+  }
+}
+
+.RQ-hover-text-white {
+  &:hover {
+    color: white;
+    transition: 0.8s;
+  }
+  &:not(:hover) {
+    transition: 0.5s;
+  }
+}
+
+.RQ-hover-backgroud-button {
+  &:hover {
+    background-color: $theme3-color-hover;
+    transition: 0.8s;
+  }
+  &:not(:hover) {
+    transition: 0.5s;
+  }
+}
+
+.RQ-background-theme3 {
+  background-color: $theme3-color;
 }

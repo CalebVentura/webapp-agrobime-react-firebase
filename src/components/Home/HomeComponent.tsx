@@ -5,7 +5,7 @@ import Typewriter from 'typewriter-effect';
 
 const HomeComponent = () => {
     return (
-        <div className="HomeComponent">
+        <div className="HomeComponent" id={"Home"}>
             <Row className={""} noGutter flex>
                 <Col xs={18} sm={18} md={9} other={7} className={"home-content RQ-d-flex RQ-align-center RQ-text-center"}>
                     <div className={"RQ-mx-4"}>

@@ -193,3 +193,18 @@
     justify-content: center;
   }
 }
+
+.RQ-button {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+}
+
+.RQ-border-theme3 {
+  border: 1px solid $theme3-color;
+}
+
+.RQ-border-theme4 {
+  border: 1px solid $theme4-color;
+}
