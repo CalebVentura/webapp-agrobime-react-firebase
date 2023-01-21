@@ -1,9 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Auth, Home } from "../ui";
+import { Home } from "../ui";
 import { ClientRoutes } from "./ClientRoutes";
 import { PrivateRoutes } from "./PrivateRoutes";
 import { PublicRoutes } from "./PublicRoutes";
+import AuthView from '../pages/Auth/Auth'
 
 
 export const AppRouter = () => {
@@ -13,7 +14,7 @@ export const AppRouter = () => {
         <Route path="/home" element={<Home />} />
         <Route path='/auth' element={
             <PublicRoutes>
-                <Auth/>
+                <AuthView/>
             </PublicRoutes>} />
         <Route path="/*" element={
             <PrivateRoutes>

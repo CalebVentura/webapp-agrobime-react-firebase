@@ -1,4 +1,26 @@
 {
+  "login": {
+    "content": {
+      "title": "Ingresa para continuar",
+      "placeHolder": {
+        "mail": "Correo electrónico",
+        "password": "Password"
+      },
+      "sign": {
+        "name": "Ingresar"
+      },
+      "signUp": {
+        "name": "Registrar"
+      },
+      "form": {
+        "action": "xxxxxx"
+      }
+    },
+    "img": {
+      "name": "agrobime",
+      "src": "https://renzoqc.dev/files/agrobime/farming-img/background-login.jpg"
+    }
+  },
   "header": {
     "logo": {
       "pathImage": "https://renzoqc.dev/files/agrobime/logos/agrobime.png",
