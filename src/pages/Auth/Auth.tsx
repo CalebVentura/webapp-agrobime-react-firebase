@@ -2,33 +2,62 @@ import data from '../../config/data.json'
 import './Auth.scss'
 import { Col, Row } from "../../components/Grid/Grid";
 import Typewriter from "typewriter-effect";
-import { useState } from "react";
-
-const TextInput = ({label, name, type}: {label?: string, name: string, type?: string}) => {
-    type = type ?? 'text'
-    const [value, setValue] = useState('');
-
-    function handleChange(e: any) {
-        setValue(e.target.value);
-    }
-
-    return (
-        <div className="input-container">
-            <input type={type} value={value} onChange={handleChange} name={name}/>
-            <label className={value && 'filled'} htmlFor={'name'}>
-                {label}
-            </label>
-        </div>
-    );
-}
+import { MouseEvent, useContext, useState } from "react";
+import { UserContext } from "../../context";
 
 const Form = () => {
+    const userContext = useContext(UserContext);
+    const [userCredentials, setUserCredentials] = useState({ email: '', password: '' })
+
+
+    const handleChange = ({ target: { name, value } }: { target: { name: string, value: string } }) => {
+        setUserCredentials({ ...userCredentials, [name]: value })
+    }
+
+    const handleLogin = async (ev: any) => {
+        ev.preventDefault()
+        const lastPath = localStorage.getItem('lastPath') || '/dashboard'
+        try {
+            await userContext?.login(userCredentials)
+        } catch (e: any) {
+            console.log(e.message)
+            // switch (e.message) {
+            //     case 'auth/weak-password':
+            //         setErrorMessage('El password debe tener al menos 6 caracteres')
+            //         break;
+            //     case 'auth/wrong-password':
+            //         setErrorMessage('La contraseña es incorrecta')
+            //         break;
+            //     case 'auth/user-not-found':
+            //         setErrorMessage('El usuario no existe')
+            //         break;
+            //     case 'auth/invalid-email':
+            //         setErrorMessage('El email no es válido')
+            //         break;
+            //     default:
+            //         setErrorMessage('Hubo un error al iniciar sesión')
+            //         break;
+            // }
+        }
+    }
+
+
     return (
-        <form action={data.login.content.form.action} className={"form-login"}>
-            <TextInput label={data.login.content.placeHolder.mail} type={'email'} name={'mail'} />
-            <TextInput label={data.login.content.placeHolder.password} type={'password'} name={'password'} />
+        <form className={"form-login"}>
+            <div className="input-container">
+                <input type={'email'} value={userCredentials.email} onChange={handleChange} name={'email'}/>
+                <label className={userCredentials.email && 'filled'} htmlFor={'name'}>
+                    {data.login.content.placeHolder.mail}
+                </label>
+            </div>
+            <div className="input-container">
+                <input type={'password'} value={userCredentials.password} onChange={handleChange} name={'password'}/>
+                <label className={userCredentials.password && 'filled'} htmlFor={'name'}>
+                    {data.login.content.placeHolder.password}
+                </label>
+            </div>
             <div className={"RQ-mt-5 RQ-mx-3 RQ-text-sm-center"}>
-                <a href="" className="RQ-button RQ-background-theme3 RQ-hover-text-white RQ-hover-backgroud-button">{data.login.content.sign.name}</a>
+                <a onClick={handleLogin} href="#" className="RQ-button RQ-background-theme3 RQ-hover-text-white RQ-hover-backgroud-button">{data.login.content.sign.name}</a>
                 <a href="" className="RQ-button RQ-background-theme3 RQ-hover-text-white RQ-hover-backgroud-button RQ-ml-3">{data.login.content.signUp.name}</a>
             </div>
         </form>
