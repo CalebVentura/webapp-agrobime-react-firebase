@@ -16,7 +16,6 @@ const Form = () => {
 
     const handleLogin = async (ev: any) => {
         ev.preventDefault()
-        const lastPath = localStorage.getItem('lastPath') || '/dashboard'
         try {
             await userContext?.login(userCredentials)
         } catch (e: any) {
@@ -30,6 +29,29 @@ const Form = () => {
             //         break;
             //     case 'auth/user-not-found':
             //         setErrorMessage('El usuario no existe')
+            //         break;
+            //     case 'auth/invalid-email':
+            //         setErrorMessage('El email no es válido')
+            //         break;
+            //     default:
+            //         setErrorMessage('Hubo un error al iniciar sesión')
+            //         break;
+            // }
+        }
+    }
+
+    const handleRegister = async (ev: any) => {
+        ev.preventDefault()
+        try {
+            await userContext?.register(userCredentials)
+        } catch (e: any) {
+            console.log(e.message)
+            // switch (e.message) {
+            //     case 'auth/weak-password':
+            //         setErrorMessage('El password debe tener al menos 6 caracteres')
+            //         break;
+            //     case 'auth/email-already-in-use':
+            //         setErrorMessage('El email ya está registrado')
             //         break;
             //     case 'auth/invalid-email':
             //         setErrorMessage('El email no es válido')
@@ -58,7 +80,7 @@ const Form = () => {
             </div>
             <div className={"RQ-mt-5 RQ-mx-3 RQ-text-sm-center"}>
                 <a onClick={handleLogin} href="#" className="RQ-button RQ-background-theme3 RQ-hover-text-white RQ-hover-backgroud-button">{data.login.content.sign.name}</a>
-                <a href="" className="RQ-button RQ-background-theme3 RQ-hover-text-white RQ-hover-backgroud-button RQ-ml-3">{data.login.content.signUp.name}</a>
+                <a onClick={handleRegister} href="#" className="RQ-button RQ-background-theme3 RQ-hover-text-white RQ-hover-backgroud-button RQ-ml-3">{data.login.content.signUp.name}</a>
             </div>
         </form>
     )
